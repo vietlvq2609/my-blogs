@@ -1,5 +1,5 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { SITE_NAME, SITE_DESCRIPTION, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
@@ -10,9 +10,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `${SITE_NAME} - ${SITE_DESCRIPTION}`,
+  description: SITE_DESCRIPTION,
   openGraph: {
+    title: `${SITE_NAME} - Fullstack Developer Portfolio`,
+    description: SITE_DESCRIPTION,
     images: [HOME_OG_IMAGE_URL],
   },
 };

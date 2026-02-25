@@ -1,27 +1,97 @@
 import Container from "@/app/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
+import { AUTHOR_SHORT_NAME, LOCATION } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800">
+    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-slate-800 dark:border-slate-700">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-[2.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
+        <div className="py-16 md:py-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 dark:text-slate-200">
+                {AUTHOR_SHORT_NAME}
+              </h3>
+              <p className="text-gray-600 dark:text-slate-400 mb-2">
+                Fullstack Developer
+              </p>
+              <p className="text-gray-600 dark:text-slate-400">
+                {LOCATION}
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4 dark:text-slate-200">
+                Quick Links
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blogs"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Blogs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4 dark:text-slate-200">
+                Connect
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="mailto:viktokle@example.com"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Email
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/viktokle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/viktokle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-200 dark:border-slate-700 pt-8 text-center">
+            <p className="text-gray-600 dark:text-slate-400">
+              © {new Date().getFullYear()} {AUTHOR_SHORT_NAME}. All rights reserved.
+            </p>
           </div>
         </div>
       </Container>

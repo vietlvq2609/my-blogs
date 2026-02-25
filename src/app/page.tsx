@@ -1,29 +1,23 @@
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import Header from "@/app/_components/header";
+import { HeroSection } from "@/app/_components/hero-section";
+import { SkillsSection } from "@/app/_components/skills-section";
+import { ExperienceSection } from "@/app/_components/experience-section";
+import { EducationSection } from "@/app/_components/education-section";
+import { ServicesSection } from "@/app/_components/services-section";
+import { ContactSection } from "@/app/_components/contact-section";
 
 export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
   return (
     <main>
       <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        <Header />
+        <HeroSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <ServicesSection />
+        <ContactSection />
       </Container>
     </main>
   );
