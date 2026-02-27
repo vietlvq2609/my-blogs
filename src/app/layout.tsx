@@ -1,9 +1,12 @@
-import Footer from "@/app/_components/footer";
-import { SITE_NAME, SITE_DESCRIPTION, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import cn from "classnames";
 import type { Metadata } from "next";
 import { Playpen_Sans } from "next/font/google";
-
-import cn from "classnames";
+import Footer from "@/app/_components/footer";
+import {
+  HOME_OG_IMAGE_URL,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";

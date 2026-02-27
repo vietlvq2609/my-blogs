@@ -1,5 +1,5 @@
-import Container from "@/app/_components/container";
 import cn from "classnames";
+import Container from "@/app/_components/container";
 
 type Props = {
   preview?: boolean;
@@ -27,9 +27,7 @@ const Alert = ({ preview }: Props) => {
               to exit preview mode.
             </>
           ) : (
-            <>
-              Welcome to my portfolio and blog.
-            </>
+            <>Welcome to my portfolio and blog.</>
           )}
         </div>
       </Container>

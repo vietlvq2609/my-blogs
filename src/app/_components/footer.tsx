@@ -14,11 +14,9 @@ export function Footer() {
               <p className="text-gray-600 dark:text-slate-400 mb-2">
                 Fullstack Developer
               </p>
-              <p className="text-gray-600 dark:text-slate-400">
-                {LOCATION}
-              </p>
+              <p className="text-gray-600 dark:text-slate-400">{LOCATION}</p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4 dark:text-slate-200">
                 Quick Links
@@ -50,7 +48,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4 dark:text-slate-200">
                 Connect
@@ -87,10 +85,11 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-200 dark:border-slate-700 pt-8 text-center">
             <p className="text-gray-600 dark:text-slate-400">
-              © {new Date().getFullYear()} {AUTHOR_SHORT_NAME}. All rights reserved.
+              © {new Date().getFullYear()} {AUTHOR_SHORT_NAME}. All rights
+              reserved.
             </p>
           </div>
         </div>

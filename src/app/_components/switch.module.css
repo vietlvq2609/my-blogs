@@ -11,7 +11,7 @@
   --size: 24px;
   height: var(--size);
   width: var(--size);
-  transition: all 0.3s ease-in-out 0s !important;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 [data-mode="system"] .switch::after {

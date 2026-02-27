@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+import styles from "./switch.module.css";
 
 declare global {
   var updateDOM: () => void;
@@ -51,6 +51,7 @@ export const NoFOUCScript = (storageKey: string) => {
   media.addEventListener("change", window.updateDOM);
 };
 
+// biome-ignore lint/suspicious/noRedeclare: this is required to reuse the function defined in injected script
 let updateDOM: () => void;
 
 /**
@@ -61,7 +62,7 @@ const Switch = () => {
     () =>
       ((typeof localStorage !== "undefined" &&
         localStorage.getItem(STORAGE_KEY)) ??
-        "system") as ColorSchemePreference,
+        "system") as ColorSchemePreference
   );
 
   useEffect(() => {
@@ -85,6 +86,7 @@ const Switch = () => {
   };
   return (
     <button
+      type="button"
       suppressHydrationWarning
       className={styles.switch}
       onClick={handleModeSwitch}
@@ -94,6 +96,7 @@ const Switch = () => {
 
 const Script = memo(() => (
   <script
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: this is required to inject script for avoiding FOUC
     dangerouslySetInnerHTML={{
       __html: `(${NoFOUCScript.toString()})('${STORAGE_KEY}')`,
     }}
