@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Alert from "@/app/_shared/_components/alert";
-import Container from "@/app/_shared/_components/container";
-import Header from "@/app/_shared/_components/header";
 import { PostBody } from "@/app/_shared/_components/post-body";
 import { PostHeader } from "@/app/_shared/_components/post-header";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
@@ -20,21 +17,15 @@ export default async function BlogPost(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main>
-      <Alert preview={post.preview} />
-      <Container>
-        <Header />
-        <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={content} />
-        </article>
-      </Container>
-    </main>
+    <article className="mb-32">
+      <PostHeader
+        title={post.title}
+        coverImage={post.coverImage}
+        date={post.date}
+        author={post.author}
+      />
+      <PostBody content={content} />
+    </article>
   );
 }
 

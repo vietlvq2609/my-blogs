@@ -1,5 +1,6 @@
 "use client";
 
+import cn from "classnames";
 import { Moon, Sun } from "lucide-react";
 import { memo, useCallback, useEffect, useState } from "react";
 
@@ -100,9 +101,7 @@ const Switch = () => {
 
   // Render placeholder during SSR
   if (!mounted) {
-    return (
-      <div className="fixed top-4 right-4 z-50 w-10 h-10" aria-hidden="true" />
-    );
+    return <div className="w-10 h-10" aria-hidden="true" />;
   }
 
   return (
@@ -110,19 +109,21 @@ const Switch = () => {
       type="button"
       onClick={handleToggle}
       aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
-      className="fixed top-4 right-4 z-50 p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-900 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all duration-200 hover:scale-110 active:scale-95"
+      className="p-2 focus:outline-none"
     >
-      <div className="relative w-5 h-5" aria-hidden="true">
-        {mode === "dark" ? (
-          <Sun
-            className={`w-5 h-5 text-yellow-500 absolute inset-0 ${isAnimating ? "animate-[spin-in_0.5s_ease-out]" : ""}`}
-          />
-        ) : (
-          <Moon
-            className={`w-5 h-5 text-slate-700 dark:text-slate-300 absolute inset-0 ${isAnimating ? "animate-[spin-in_0.5s_ease-out]" : ""}`}
-          />
-        )}
-      </div>
+      {mode === "dark" ? (
+        <Sun
+          className={cn("w-5 h-5 text-yellow-500", {
+            "animate-[spin-in_0.5s_ease-out]": isAnimating,
+          })}
+        />
+      ) : (
+        <Moon
+          className={cn("w-5 h-5 text-slate-700 dark:text-slate-300", {
+            "animate-[spin-in_0.5s_ease-out]": isAnimating,
+          })}
+        />
+      )}
     </button>
   );
 };

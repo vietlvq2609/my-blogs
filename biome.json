@@ -30,6 +30,9 @@
       "suspicious": {
         "noExplicitAny": "warn",
         "noUnknownAtRules": "off"
+      },
+      "complexity": {
+        "noImportantStyles": "off"
       }
     }
   },
@@ -86,11 +89,6 @@
           }
         }
       }
-    },
-    { "formatter": { "indentWidth": 4 } },
-    {
-      "javascript": { "formatter": { "quoteStyle": "single" } },
-      "formatter": { "indentWidth": 4 }
     }
   ],
   "assist": {
