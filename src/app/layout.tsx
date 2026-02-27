@@ -1,13 +1,16 @@
 import Footer from "@/app/_components/footer";
 import { SITE_NAME, SITE_DESCRIPTION, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playpen_Sans } from "next/font/google";
+
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Playpen_Sans({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} - ${SITE_DESCRIPTION}`,
@@ -60,7 +63,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(font.className, "dark:bg-slate-950 dark:text-slate-300")}
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
