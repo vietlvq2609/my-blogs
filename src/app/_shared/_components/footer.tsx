@@ -1,4 +1,4 @@
-import Container from "@/app/_components/container";
+import Container from "@/app/_shared/_components/container";
 import { AUTHOR_SHORT_NAME, LOCATION } from "@/lib/constants";
 
 export function Footer() {

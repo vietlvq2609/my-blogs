@@ -1,5 +1,5 @@
-import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
+import Container from "@/app/_shared/_components/container";
+import Header from "@/app/_shared/_components/header";
 
 export default function Index() {
   return (

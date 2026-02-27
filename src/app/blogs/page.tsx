@@ -1,7 +1,7 @@
-import Container from "@/app/_components/container";
-import Header from "@/app/_components/header";
-import { HeroPost } from "@/app/_components/hero-post";
-import { MoreStories } from "@/app/_components/more-stories";
+import Container from "@/app/_shared/_components/container";
+import Header from "@/app/_shared/_components/header";
+import { HeroPost } from "@/app/_shared/_components/hero-post";
+import { MoreStories } from "@/app/_shared/_components/more-stories";
 import { getAllPosts } from "@/lib/api";
 
 export default function BlogsPage() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { memo, useEffect, useState, useCallback } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 
 type ColorSchemePreference = "dark" | "light";
 
