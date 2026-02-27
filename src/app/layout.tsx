@@ -16,10 +16,10 @@ const font = Playpen_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} - ${SITE_DESCRIPTION}`,
+  title: `${SITE_NAME}`,
   description: SITE_DESCRIPTION,
   openGraph: {
-    title: `${SITE_NAME} - Fullstack Developer Portfolio`,
+    title: `${SITE_NAME}`,
     description: SITE_DESCRIPTION,
     images: [HOME_OG_IMAGE_URL],
   },
