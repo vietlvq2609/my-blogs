@@ -45,7 +45,7 @@ export function HeroSection() {
             />
           </div>
           <motion.div
-            className="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white dark:border-gray-900"
+            className="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-white dark:border-slate-900"
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
           />
@@ -66,7 +66,7 @@ export function HeroSection() {
           </motion.p>
           <motion.p
             variants={fadeInUp}
-            className="text-lg text-gray-600 dark:text-slate-400 max-w-md"
+            className="text-lg text-slate-600 dark:text-slate-400 max-w-md"
           >
             {personalInfo.tagline}
           </motion.p>

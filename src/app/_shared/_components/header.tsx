@@ -16,13 +16,13 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-white dark:bg-slate-950 backdrop-blur-sm bg-opacity-95">
         <div className="container mx-auto px-5 flex justify-between items-center py-6 gap-x-2">
-          <div className="flex items-center gap-4 md:gap-8 lg:gap-60">
-            <Link href="/">
-              <Logo />
-            </Link>
+          <Link href="/">
+            <Logo />
+          </Link>
 
+          <div className="flex items-center gap-4">
             {/* Desktop Navigation - Hidden on mobile/tablet */}
-            <nav className="hidden lg:flex items-center gap-6 lg:gap-10 text-lg font-medium">
+            <nav className="hidden lg:flex items-center gap-4 text-md">
               <Link
                 href="/about"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -36,9 +36,6 @@ const Header = () => {
                 Blogs
               </Link>
             </nav>
-          </div>
-
-          <div className="flex items-center gap-4">
             <ThemeSwitcher />
 
             {/* Hamburger Button - Visible on mobile/tablet */}
@@ -46,7 +43,7 @@ const Header = () => {
               type="button"
               onClick={toggleMenu}
               aria-label="Open menu"
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -60,21 +57,21 @@ const Header = () => {
           <Link
             href="/blogs"
             onClick={toggleMenu}
-            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg border-b border-gray-100 dark:border-gray-800"
+            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg border-b border-slate-100 dark:border-slate-800"
           >
             Blogs
           </Link>
           <Link
             href="/about"
             onClick={toggleMenu}
-            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg border-b border-gray-100 dark:border-gray-800"
+            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg border-b border-slate-100 dark:border-slate-800"
           >
             About
           </Link>
           <Link
             href="/contact"
             onClick={toggleMenu}
-            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg"
+            className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors py-4 px-4 rounded-lg"
           >
             Contact
           </Link>

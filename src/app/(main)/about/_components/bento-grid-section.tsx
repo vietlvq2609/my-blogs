@@ -23,11 +23,11 @@ export function BentoGridSection() {
             <span className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
               📖 My Story
             </span>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed flex-1">
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed flex-1">
               {personalInfo.story}
             </p>
-            <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
                 &quot;Code is poetry written for machines to execute and humans
                 to understand.&quot;
               </p>
@@ -39,7 +39,7 @@ export function BentoGridSection() {
         <BentoCard delay={0.1}>
           <span className="text-3xl mb-3 block">📍</span>
           <h3 className="font-semibold text-lg mb-1">Location</h3>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-slate-600 dark:text-slate-400">
             {personalInfo.location}
           </p>
         </BentoCard>
@@ -48,7 +48,7 @@ export function BentoGridSection() {
         <BentoCard delay={0.15}>
           <span className="text-3xl mb-3 block">🎂</span>
           <h3 className="font-semibold text-lg mb-1">Age</h3>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-slate-600 dark:text-slate-400">
             {personalInfo.age} years young
           </p>
         </BentoCard>
@@ -62,7 +62,7 @@ export function BentoGridSection() {
             {hobbies.map((hobby) => (
               <span
                 key={hobby.label}
-                className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium"
+                className="px-4 py-2 bg-slate-100 dark:bg-slate-700 rounded-full text-sm font-medium"
               >
                 {hobby.emoji} {hobby.label}
               </span>
@@ -96,7 +96,7 @@ export function BentoGridSection() {
             {funFacts.map((fact) => (
               <li
                 key={fact}
-                className="text-gray-700 dark:text-gray-300 text-sm"
+                className="text-slate-700 dark:text-slate-300 text-sm"
               >
                 {fact}
               </li>

@@ -69,7 +69,7 @@ export function Footer() {
               <div className="mb-6">
                 <Logo />
               </div>
-              <p className="text-gray-600 dark:text-slate-400 mb-6 max-w-sm">
+              <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-sm">
                 Fullstack Developer passionate about building modern web
                 applications and sharing knowledge through technical writing.
               </p>
@@ -89,7 +89,7 @@ export function Footer() {
                           ? undefined
                           : "noopener noreferrer"
                       }
-                      className="text-gray-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors"
+                      className="text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors"
                       aria-label={social.name}
                     >
                       <Icon className="w-5 h-5" />
@@ -101,7 +101,7 @@ export function Footer() {
 
             {/* Browse by Category */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-slate-200 mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-200 mb-4">
                 Categories
               </h4>
               <ul className="space-y-3">
@@ -109,7 +109,7 @@ export function Footer() {
                   <li key={category.name}>
                     <a
                       href={category.href}
-                      className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
+                      className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                     >
                       {category.name}
                     </a>
@@ -120,7 +120,7 @@ export function Footer() {
 
             {/* General Navigation */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-slate-200 mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-200 mb-4">
                 General
               </h4>
               <ul className="space-y-3">
@@ -128,7 +128,7 @@ export function Footer() {
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
+                      className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                     >
                       {link.name}
                     </a>
@@ -139,7 +139,7 @@ export function Footer() {
 
             {/* Portfolio / Live Demos */}
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-slate-200 mb-4">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-900 dark:text-slate-200 mb-4">
                 Portfolio
               </h4>
               <ul className="space-y-3">
@@ -149,7 +149,7 @@ export function Footer() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm inline-flex items-center gap-1"
+                      className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm inline-flex items-center gap-1"
                     >
                       {link.name}
                       <ExternalLink className="w-3 h-3" />
@@ -161,8 +161,8 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-200 dark:border-slate-700 mt-12 pt-8 text-center">
-            <p className="text-gray-500 dark:text-slate-400 text-sm">
+          <div className="border-t border-slate-200 dark:border-slate-700 mt-12 pt-8 text-center">
+            <p className="text-slate-500 dark:text-slate-400 text-sm">
               © {new Date().getFullYear()} All rights reserved by Viktor Le (Le
               Vu Quoc Viet)
             </p>
